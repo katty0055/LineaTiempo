@@ -7,6 +7,7 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 from django.contrib.auth.models import User, Group
+from datetime import date
 
 
 # class AuthGroup(models.Model):
@@ -117,7 +118,10 @@ class EstadoTarea(models.Model):
     id_estado = models.BigAutoField(primary_key=True, db_comment='IDENTIFICADOR DE LA TAREA.')
     nombre_estado = models.CharField(db_comment='NOMBRE DEL ESTADO')
     descripcion_estado = models.CharField(blank=True, null=True, db_comment='DESCRIPCION DEL ESTADO DE LA TAREA')
-    estado = models.BooleanField(db_comment='ESTADO ACTIVO O INACTIVO')
+    estado = models.BooleanField(default=True, db_comment='ESTADO ACTIVO O INACTIVO')
+
+    def __str__(self):
+        return self.nombre_estado
 
     class Meta:
         db_table = 'estado_tarea'
@@ -128,7 +132,10 @@ class Proyecto(models.Model):
     id_proyecto = models.BigAutoField(primary_key=True, db_comment='IDENTIFICADOR DEL PROYECTO')
     fecha_creacion = models.DateField(db_comment='FECHA DE CREACION DEL PROYECTO')
     titulo = models.CharField(db_comment='TITULO DEL PROYECTO')
-    estado = models.BooleanField(db_comment='ESTADO ACTIVO O INACTIVO')
+    estado = models.BooleanField(default=True, db_comment='ESTADO ACTIVO O INACTIVO')
+
+    def __str__(self):
+        return self.titulo
 
     class Meta:
         db_table = 'proyecto'
@@ -140,8 +147,21 @@ class ProyectoUsuarioRol(models.Model):
     id_proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE, db_column='id_proyecto', db_comment='IDENTIFICADOR DEL PROYECTO')
     id_user = models.ForeignKey(User, on_delete=models.CASCADE, db_column='id_user', db_comment='IDENTIFICADOR DEL USUARIO')
     id_rol = models.ForeignKey(Group, on_delete=models.CASCADE, db_column='id_group', db_comment='IDENTIFICADOR DEL ROL')
-    estado = models.BooleanField(db_comment='ESTADO ACTIVO O INACTIVO')
+    estado = models.BooleanField(default=True, db_comment='ESTADO ACTIVO O INACTIVO')
+        
+    def proyecto_nombre(self):
+        return self.id_proyecto.titulo  
 
+    def rol_nombre(self):
+        return self.id_rol.name  
+
+    def usuario_nombre(self):
+        return self.id_user.username 
+
+    proyecto_nombre.short_description = 'Proyecto'  
+    rol_nombre.short_description = 'Rol'
+    usuario_nombre.short_description = 'Usuario'
+    
     class Meta:
         db_table = 'proyecto_usuario_rol'
         db_table_comment = 'TABLA DONDE SE INDICA QUE USUARIO ESTA RELACIONADO CON CADA PROYECTO, Y EL ROL QUE TENDRA'
@@ -149,8 +169,8 @@ class ProyectoUsuarioRol(models.Model):
 
 class Tarea(models.Model):
     id_tarea = models.BigAutoField(primary_key=True, db_comment='IDENTIFICADOR DE LA TAREA')
-    id_estado = models.ForeignKey(EstadoTarea, on_delete=models.CASCADE, db_column='id_estado', db_comment='IDENTIFICADOR DE LA TAREA.')
-    id_proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE, db_column='id_proyecto', db_comment='IDENTIFICADOR DEL PROYECTO')
+    id_estado = models.ForeignKey(EstadoTarea, on_delete=models.CASCADE, default=1, verbose_name="Estado", db_column='id_estado', db_comment='IDENTIFICADOR DE LA TAREA.')
+    id_proyecto = models.ForeignKey(Proyecto, on_delete=models.CASCADE,verbose_name="Proyecto", db_column='id_proyecto', db_comment='IDENTIFICADOR DEL PROYECTO')
     usuario_rol = models.CharField(blank=True, null=True, db_comment='USUARIO ASIGNADO A LA TAREA')
     titulo = models.CharField(db_comment='TITULO DE LA TAREA')
     descripcion = models.CharField(db_comment='DESCRIPCION DE LA TAREA')
@@ -159,6 +179,10 @@ class Tarea(models.Model):
     fecha_fin_estimada = models.DateField(db_comment='FECHA ESTIMADA DE FIN')
     fecha_inicio_real = models.DateField(blank=True, null=True, db_comment='FECHA REAL DE INICIO')
     fecha_fin_real = models.DateField(blank=True, null=True, db_comment='FECHA REAL DE FIN')
+    
+    def __str__(self):
+        return self.titulo 
+
 
     class Meta:
         db_table = 'tarea'
