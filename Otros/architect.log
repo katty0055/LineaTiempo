@@ -1,0 +1,450 @@
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+509  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+570  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+571  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+612  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+507  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+568  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+570  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+613  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+22078 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+502  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+562  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+563  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+607  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+22217 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+99628 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.KettleDataSourceOptionsPanel  -  The map is: {Hostname=, Port=5432, Database=}
+104163 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class org.postgresql.Driver loaded without exception
+104473 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class org.postgresql.Driver loaded without exception
+116871 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.KettleDataSourceOptionsPanel  -  The map is: {}
+136522 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.KettleDataSourceOptionsPanel  -  The map is: {Hostname=, Port=5432, Database=}
+153683 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class org.postgresql.Driver loaded without exception
+153716 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class org.postgresql.Driver loaded without exception
+163412 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.KettleDataSourceOptionsPanel  -  The map is: {Hostname=, Port=5432, Database=}
+183674 [AWT-EventQueue-0] WARN  ca.sqlpower.sqlobject.ForeignKeyColumnUpdaterPoolingSPListener  - Warning: unknown column property autoIncrementSequenceName changed while monitoring pkTable
+183678 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE SEQUENCE estado_tarea_id_estado_seq_1
+183682 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE ESTADO_TAREA (
+                ID_ESTADO BIGINT NOT NULL DEFAULT nextval('estado_tarea_id_estado_seq_1'),
+                NOMBRE_ESTADO VARCHAR NOT NULL,
+                DESCRIPCION_ESTADO VARCHAR,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT estado_tarea_pk PRIMARY KEY (ID_ESTADO)
+)
+183682 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON TABLE ESTADO_TAREA IS 'ESTADO DE LA TAREA'
+183682 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN ESTADO_TAREA.ID_ESTADO IS 'IDENTIFICADOR DE LA TAREA.'
+183682 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN ESTADO_TAREA.NOMBRE_ESTADO IS 'NOMBRE DEL ESTADO'
+183682 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN ESTADO_TAREA.DESCRIPCION_ESTADO IS 'DESCRIPCION DEL ESTADO DE LA TAREA'
+183683 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN ESTADO_TAREA.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+183683 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE estado_tarea_id_estado_seq_1 OWNED BY ESTADO_TAREA.ID_ESTADO
+183683 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE ROL (
+                ID_ROL BIGINT NOT NULL,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT rol_pk PRIMARY KEY (ID_ROL)
+)
+183683 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON TABLE ROL IS 'TABLA QUE ALAMACENA LOS ROLES QUE PUEDE TENER LOS USUARIOS'
+183683 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN ROL.ID_ROL IS 'IDENTIFICADOR DEL ROL'
+183684 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN ROL.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+183684 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE SEQUENCE usuario_id_usuario_seq
+183684 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE USUARIO (
+                ID_USUARIO BIGINT NOT NULL DEFAULT nextval('usuario_id_usuario_seq'),
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT usuario_pk PRIMARY KEY (ID_USUARIO)
+)
+183684 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON TABLE USUARIO IS 'TBALA DONDE SE ALMACENAN LOS USUARIOS'
+183684 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN USUARIO.ID_USUARIO IS 'IDENTIFICADOR DEL USUARIO'
+183685 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN USUARIO.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+183685 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE usuario_id_usuario_seq OWNED BY USUARIO.ID_USUARIO
+183685 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE proyecto_id_proyecto_seq
+183685 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE PROYECTO (
+                ID_PROYECTO BIGINT NOT NULL DEFAULT nextval('proyecto_id_proyecto_seq'),
+                FECHA_CREACION DATE NOT NULL,
+                TITULO VARCHAR NOT NULL,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT proyecto_pk PRIMARY KEY (ID_PROYECTO)
+)
+183685 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON TABLE PROYECTO IS 'TABLA DONDE SE ALMACENA LOS PROYECTOS'
+183686 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO.ID_PROYECTO IS 'IDENTIFICADOR DEL PROYECTO'
+183686 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO.FECHA_CREACION IS 'FECHA DE CREACION DEL PROYECTO'
+183686 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO.TITULO IS 'TITULO DEL PROYECTO'
+183686 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+183686 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE proyecto_id_proyecto_seq OWNED BY PROYECTO.ID_PROYECTO
+183686 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE tarea_id_tarea_seq
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE TAREA (
+                ID_TAREA BIGINT NOT NULL DEFAULT nextval('tarea_id_tarea_seq'),
+                ID_ESTADO BIGINT NOT NULL,
+                ID_PROYECTO BIGINT NOT NULL,
+                USUARIO_ROL VARCHAR,
+                TITULO VARCHAR NOT NULL,
+                DESCRIPCION VARCHAR NOT NULL,
+                COMENTARIO VARCHAR,
+                FECHA_INICIO_ESTIMADA DATE NOT NULL,
+                FECHA_FIN_ESTIMADA DATE NOT NULL,
+                FECHA_INICIO_REAL DATE,
+                FECHA_FIN_REAL DATE,
+                CONSTRAINT tarea_pk PRIMARY KEY (ID_TAREA)
+)
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON TABLE TAREA IS 'TABLA DE LAS TAREAS RELACIONADAS A UN PROYECTO'
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.ID_TAREA IS 'IDENTIFICADOR DE LA TAREA'
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.ID_ESTADO IS 'IDENTIFICADOR DE LA TAREA.'
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.ID_PROYECTO IS 'IDENTIFICADOR DEL PROYECTO'
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.USUARIO_ROL IS 'USUARIO ASIGNADO A LA TAREA'
+183687 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.TITULO IS 'TITULO DE LA TAREA'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.DESCRIPCION IS 'DESCRIPCION DE LA TAREA'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.COMENTARIO IS 'COMENTARIO DE LA TAREA'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.FECHA_INICIO_ESTIMADA IS 'FECHA ESTIMADA DE INICIO'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.FECHA_FIN_ESTIMADA IS 'FECHA ESTIMADA DE FIN'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.FECHA_INICIO_REAL IS 'FECHA REAL DE INICIO'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN TAREA.FECHA_FIN_REAL IS 'FECHA REAL DE FIN'
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE tarea_id_tarea_seq OWNED BY TAREA.ID_TAREA
+183688 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE SEQUENCE proyecto_usuario_rol_id_proyecto_usuario_rol_seq
+183689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE PROYECTO_USUARIO_ROL (
+                ID_PROYECTO_USUARIO_ROL BIGINT NOT NULL DEFAULT nextval('proyecto_usuario_rol_id_proyecto_usuario_rol_seq'),
+                ID_PROYECTO BIGINT NOT NULL,
+                ID_USUARIO BIGINT NOT NULL,
+                ID_ROL BIGINT NOT NULL,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT proyecto_usuario_rol_pk PRIMARY KEY (ID_PROYECTO_USUARIO_ROL)
+)
+183689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON TABLE PROYECTO_USUARIO_ROL IS 'TABLA DONDE SE INDICA QUE USUARIO ESTA RELACIONADO CON CADA PROYECTO, Y EL ROL QUE TENDRA'
+183689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_PROYECTO_USUARIO_ROL IS 'IDENTIFDICADOR DE LA RELACION ENTRE LAS TABLAS PROYECTO, ROL, USUARIO'
+183689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_PROYECTO IS 'IDENTIFICADOR DEL PROYECTO'
+183689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_USUARIO IS 'IDENTIFICADOR DEL USUARIO'
+183689 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_ROL IS 'IDENTIFICADOR DEL ROL'
+183690 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+183690 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER SEQUENCE proyecto_usuario_rol_id_proyecto_usuario_rol_seq OWNED BY PROYECTO_USUARIO_ROL.ID_PROYECTO_USUARIO_ROL
+183690 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE TAREA ADD CONSTRAINT estado_tarea_tarea_fk
+FOREIGN KEY (ID_ESTADO)
+REFERENCES ESTADO_TAREA (ID_ESTADO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+183691 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE PROYECTO_USUARIO_ROL ADD CONSTRAINT rol_proyecto_usuario_fk
+FOREIGN KEY (ID_ROL)
+REFERENCES ROL (ID_ROL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+183691 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE PROYECTO_USUARIO_ROL ADD CONSTRAINT usuario_proyecto_usuario_fk
+FOREIGN KEY (ID_USUARIO)
+REFERENCES USUARIO (ID_USUARIO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+183691 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE PROYECTO_USUARIO_ROL ADD CONSTRAINT proyecto_proyecto_usuario_fk
+FOREIGN KEY (ID_PROYECTO)
+REFERENCES PROYECTO (ID_PROYECTO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+183692 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE TAREA ADD CONSTRAINT proyecto_tarea_fk
+FOREIGN KEY (ID_PROYECTO)
+REFERENCES PROYECTO (ID_PROYECTO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+183695 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :55
+192031 [Thread-7] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class org.postgresql.Driver loaded without exception
+192072 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192092 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192093 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192094 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192094 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192095 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192095 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192096 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192096 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192097 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Sequence conflicts not supported.
+192097 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+192097 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+192097 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+192097 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+192097 [Thread-7] ERROR ca.sqlpower.architect.ddl.ConflictResolver  - Relationship conflicts are not supported yet!
+192099 [Thread-9] INFO  ca.sqlpower.sql.JDBCDataSource  - Driver Class org.postgresql.Driver loaded without exception
+192138 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Starting DDL Generation at Wed Mar 19 10:44:55 PYST 2025
+192138 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Database Target: (Target Database)
+192138 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Playpen Dump: (Target Database)
+192139 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+CREATE SEQUENCE estado_tarea_id_estado_seq_1
+192158 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE TABLE ESTADO_TAREA (
+                ID_ESTADO BIGINT NOT NULL DEFAULT nextval('estado_tarea_id_estado_seq_1'),
+                NOMBRE_ESTADO VARCHAR NOT NULL,
+                DESCRIPCION_ESTADO VARCHAR,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT estado_tarea_pk PRIMARY KEY (ID_ESTADO)
+)
+192187 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON TABLE ESTADO_TAREA IS 'ESTADO DE LA TAREA'
+192190 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN ESTADO_TAREA.ID_ESTADO IS 'IDENTIFICADOR DE LA TAREA.'
+192191 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN ESTADO_TAREA.NOMBRE_ESTADO IS 'NOMBRE DEL ESTADO'
+192191 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN ESTADO_TAREA.DESCRIPCION_ESTADO IS 'DESCRIPCION DEL ESTADO DE LA TAREA'
+192191 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN ESTADO_TAREA.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+192192 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+ALTER SEQUENCE estado_tarea_id_estado_seq_1 OWNED BY ESTADO_TAREA.ID_ESTADO
+192193 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE TABLE ROL (
+                ID_ROL BIGINT NOT NULL,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT rol_pk PRIMARY KEY (ID_ROL)
+)
+192195 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON TABLE ROL IS 'TABLA QUE ALAMACENA LOS ROLES QUE PUEDE TENER LOS USUARIOS'
+192196 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN ROL.ID_ROL IS 'IDENTIFICADOR DEL ROL'
+192196 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN ROL.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+192196 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+CREATE SEQUENCE usuario_id_usuario_seq
+192197 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE TABLE USUARIO (
+                ID_USUARIO BIGINT NOT NULL DEFAULT nextval('usuario_id_usuario_seq'),
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT usuario_pk PRIMARY KEY (ID_USUARIO)
+)
+192201 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON TABLE USUARIO IS 'TBALA DONDE SE ALMACENAN LOS USUARIOS'
+192201 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN USUARIO.ID_USUARIO IS 'IDENTIFICADOR DEL USUARIO'
+192201 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN USUARIO.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+192202 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+ALTER SEQUENCE usuario_id_usuario_seq OWNED BY USUARIO.ID_USUARIO
+192202 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE SEQUENCE proyecto_id_proyecto_seq
+192203 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE TABLE PROYECTO (
+                ID_PROYECTO BIGINT NOT NULL DEFAULT nextval('proyecto_id_proyecto_seq'),
+                FECHA_CREACION DATE NOT NULL,
+                TITULO VARCHAR NOT NULL,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT proyecto_pk PRIMARY KEY (ID_PROYECTO)
+)
+192208 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON TABLE PROYECTO IS 'TABLA DONDE SE ALMACENA LOS PROYECTOS'
+192209 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO.ID_PROYECTO IS 'IDENTIFICADOR DEL PROYECTO'
+192209 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO.FECHA_CREACION IS 'FECHA DE CREACION DEL PROYECTO'
+192210 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO.TITULO IS 'TITULO DEL PROYECTO'
+192210 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+192210 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+ALTER SEQUENCE proyecto_id_proyecto_seq OWNED BY PROYECTO.ID_PROYECTO
+192210 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE SEQUENCE tarea_id_tarea_seq
+192211 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE TABLE TAREA (
+                ID_TAREA BIGINT NOT NULL DEFAULT nextval('tarea_id_tarea_seq'),
+                ID_ESTADO BIGINT NOT NULL,
+                ID_PROYECTO BIGINT NOT NULL,
+                USUARIO_ROL VARCHAR,
+                TITULO VARCHAR NOT NULL,
+                DESCRIPCION VARCHAR NOT NULL,
+                COMENTARIO VARCHAR,
+                FECHA_INICIO_ESTIMADA DATE NOT NULL,
+                FECHA_FIN_ESTIMADA DATE NOT NULL,
+                FECHA_INICIO_REAL DATE,
+                FECHA_FIN_REAL DATE,
+                CONSTRAINT tarea_pk PRIMARY KEY (ID_TAREA)
+)
+192216 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON TABLE TAREA IS 'TABLA DE LAS TAREAS RELACIONADAS A UN PROYECTO'
+192217 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.ID_TAREA IS 'IDENTIFICADOR DE LA TAREA'
+192217 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.ID_ESTADO IS 'IDENTIFICADOR DE LA TAREA.'
+192217 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.ID_PROYECTO IS 'IDENTIFICADOR DEL PROYECTO'
+192217 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.USUARIO_ROL IS 'USUARIO ASIGNADO A LA TAREA'
+192218 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.TITULO IS 'TITULO DE LA TAREA'
+192218 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.DESCRIPCION IS 'DESCRIPCION DE LA TAREA'
+192218 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.COMENTARIO IS 'COMENTARIO DE LA TAREA'
+192218 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.FECHA_INICIO_ESTIMADA IS 'FECHA ESTIMADA DE INICIO'
+192219 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.FECHA_FIN_ESTIMADA IS 'FECHA ESTIMADA DE FIN'
+192219 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.FECHA_INICIO_REAL IS 'FECHA REAL DE INICIO'
+192220 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN TAREA.FECHA_FIN_REAL IS 'FECHA REAL DE FIN'
+192220 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+ALTER SEQUENCE tarea_id_tarea_seq OWNED BY TAREA.ID_TAREA
+192220 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE SEQUENCE proyecto_usuario_rol_id_proyecto_usuario_rol_seq
+192221 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+CREATE TABLE PROYECTO_USUARIO_ROL (
+                ID_PROYECTO_USUARIO_ROL BIGINT NOT NULL DEFAULT nextval('proyecto_usuario_rol_id_proyecto_usuario_rol_seq'),
+                ID_PROYECTO BIGINT NOT NULL,
+                ID_USUARIO BIGINT NOT NULL,
+                ID_ROL BIGINT NOT NULL,
+                ESTADO BOOLEAN NOT NULL,
+                CONSTRAINT proyecto_usuario_rol_pk PRIMARY KEY (ID_PROYECTO_USUARIO_ROL)
+)
+192224 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON TABLE PROYECTO_USUARIO_ROL IS 'TABLA DONDE SE INDICA QUE USUARIO ESTA RELACIONADO CON CADA PROYECTO, Y EL ROL QUE TENDRA'
+192225 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_PROYECTO_USUARIO_ROL IS 'IDENTIFDICADOR DE LA RELACION ENTRE LAS TABLAS PROYECTO, ROL, USUARIO'
+192225 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_PROYECTO IS 'IDENTIFICADOR DEL PROYECTO'
+192225 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_USUARIO IS 'IDENTIFICADOR DEL USUARIO'
+192226 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ID_ROL IS 'IDENTIFICADOR DEL ROL'
+192227 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+COMMENT ON COLUMN PROYECTO_USUARIO_ROL.ESTADO IS 'ESTADO ACTIVO O INACTIVO'
+192227 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+
+ALTER SEQUENCE proyecto_usuario_rol_id_proyecto_usuario_rol_seq OWNED BY PROYECTO_USUARIO_ROL.ID_PROYECTO_USUARIO_ROL
+192227 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE TAREA ADD CONSTRAINT estado_tarea_tarea_fk
+FOREIGN KEY (ID_ESTADO)
+REFERENCES ESTADO_TAREA (ID_ESTADO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+192234 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE PROYECTO_USUARIO_ROL ADD CONSTRAINT rol_proyecto_usuario_fk
+FOREIGN KEY (ID_ROL)
+REFERENCES ROL (ID_ROL)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+192235 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE PROYECTO_USUARIO_ROL ADD CONSTRAINT usuario_proyecto_usuario_fk
+FOREIGN KEY (ID_USUARIO)
+REFERENCES USUARIO (ID_USUARIO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+192237 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE PROYECTO_USUARIO_ROL ADD CONSTRAINT proyecto_proyecto_usuario_fk
+FOREIGN KEY (ID_PROYECTO)
+REFERENCES PROYECTO (ID_PROYECTO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+192238 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - executing: 
+
+ALTER TABLE TAREA ADD CONSTRAINT proyecto_tarea_fk
+FOREIGN KEY (ID_PROYECTO)
+REFERENCES PROYECTO (ID_PROYECTO)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+192239 [Thread-9] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - Successfully executed 55 out of 55 statements.

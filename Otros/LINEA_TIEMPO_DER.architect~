@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.9">
+ <project-name>LINEA_TIEMPO_DER</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="PlayPen Database" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="d3d7d7ce-a4b6-4397-bc4a-74566d4b6ccf" name="PROYECTO" objectType="TABLE" physicalName="PROYECTO" >
+   <remarks>TABLA DONDE SE ALMACENA LOS PROYECTOS</remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="03d48df2-b48b-488c-9069-955cb29be7c6" autoIncrement="true" autoIncrementSequenceName="PROYECTO_ID_PROYECTO_seq" defaultValue="" name="ID_PROYECTO" nullable="0" physicalName="ID_PROYECTO" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL PROYECTO</remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="8eb26248-a311-4727-97d7-59de1a3f469b" autoIncrement="false" autoIncrementSequenceName="PROYECTO_FECHA_CREACION_seq" defaultValue="" name="FECHA_CREACION" nullable="0" physicalName="FECHA_CREACION" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>FECHA DE CREACION DEL PROYECTO</remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="2d0c8a1f-9d40-4488-b54e-d7917db14147" autoIncrement="false" autoIncrementSequenceName="TAREA_TITULO_seq" defaultValue="" name="TITULO" nullable="0" physicalName="TITULO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>TITULO DEL PROYECTO</remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="93fa5d4d-9139-4dd3-a36e-3ccf674ae9b6" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ESTADO_seq" defaultValue="" name="ESTADO" nullable="0" physicalName="ESTADO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>ESTADO ACTIVO O INACTIVO</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX6" populated="true" UUID="f35f89de-31ff-4e0a-9174-44a248384788" clustered="false" name="PROYECTO_pk" physicalName="PROYECTO_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC7" populated="true" UUID="e03036bc-c767-4570-b370-ae0ed6b96d31" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="ID_PROYECTO" physicalName="ID_PROYECTO" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB8" populated="true" UUID="8b6be032-46dd-4160-8cf7-a53cfb76ed7b" name="USUARIO" objectType="TABLE" physicalName="USUARIO" >
+   <remarks>TBALA DONDE SE ALMACENAN LOS USUARIOS</remarks>
+   <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL9" populated="true" UUID="1f184787-4d7e-4e47-8b44-b3b79aa4df8d" autoIncrement="true" autoIncrementSequenceName="USUARIO_ID_USUARIO_seq" defaultValue="" name="ID_USUARIO" nullable="0" physicalName="ID_USUARIO" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL USUARIO</remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="47a84723-75e6-420d-aaf7-142100ddb160" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ESTADO_seq" defaultValue="" name="ESTADO" nullable="0" physicalName="ESTADO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>ESTADO ACTIVO O INACTIVO</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB82" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB84" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX11" populated="true" UUID="b517615d-1612-4f6a-81ad-05145e3e1944" clustered="false" name="USUARIO_pk" physicalName="USUARIO_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC12" populated="true" UUID="18ff097d-90e5-4c49-a1f4-24983dca9e8e" ascendingOrDescending="UNSPECIFIED" column-ref="COL9" name="ID_USUARIO" physicalName="ID_USUARIO" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB13" populated="true" UUID="7ed92123-199d-4cfc-85d4-ce95b48ef515" name="PROYECTO_USUARIO_ROL" objectType="TABLE" physicalName="PROYECTO_USUARIO_ROL" >
+   <remarks>TABLA DONDE SE INDICA QUE USUARIO ESTA RELACIONADO CON CADA PROYECTO, Y EL ROL QUE TENDRA</remarks>
+   <folder id="FOLTAB131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL14" populated="true" UUID="dc5b0ada-289f-4300-9a48-1d2bbf9b75c8" autoIncrement="true" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ID_PROYECTO_USUARIO_ROL_seq" defaultValue="" name="ID_PROYECTO_USUARIO_ROL" nullable="0" physicalName="ID_PROYECTO_USUARIO_ROL" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFDICADOR DE LA RELACION ENTRE LAS TABLAS PROYECTO, ROL, USUARIO</remarks>
+    </column>
+    <column id="COL15" populated="true" UUID="da710fe2-b2a1-4a88-bab5-6a5b6bb5ec25" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ID_PROYECTO_seq" defaultValue="" name="ID_PROYECTO" nullable="0" physicalName="ID_PROYECTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL PROYECTO</remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="2da7ffbc-83f4-412d-81c8-f618fe6d20eb" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ID_USUARIO_seq" defaultValue="" name="ID_USUARIO" nullable="0" physicalName="ID_USUARIO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL USUARIO</remarks>
+    </column>
+    <column id="COL17" populated="true" UUID="e0bcfd1b-c1c7-4852-b9bc-3275fad293a3" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ID_ROL_seq" defaultValue="" name="ID_ROL" nullable="0" physicalName="ID_ROL" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL ROL</remarks>
+    </column>
+    <column id="COL18" populated="true" UUID="970ef109-a407-45c0-b0cd-6796ab215469" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ESTADO_seq" defaultValue="" name="ESTADO" nullable="0" physicalName="ESTADO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>ESTADO ACTIVO O INACTIVO</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX19" populated="true" UUID="e899375d-c4cb-4b13-9b0a-d15bf28cb025" clustered="false" name="PROYECTO_USUARIO_ROL_pk" physicalName="PROYECTO_USUARIO_ROL_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC20" populated="true" UUID="0a4fce88-58a8-4a89-8341-529549597cc5" ascendingOrDescending="UNSPECIFIED" column-ref="COL14" name="ID_PROYECTO_USUARIO_ROL" physicalName="ID_PROYECTO_USUARIO_ROL" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB21" populated="true" UUID="d7be5d21-2053-4235-a65f-a6efe9582059" name="ROL" objectType="TABLE" physicalName="ROL" >
+   <remarks>TABLA QUE ALAMACENA LOS ROLES QUE PUEDE TENER LOS USUARIOS</remarks>
+   <folder id="FOLTAB211" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL22" populated="true" UUID="fed68334-46dc-4039-9852-82f5c45b2e3d" autoIncrement="false" autoIncrementSequenceName="ROL_ID_ROL_seq" defaultValue="" name="ID_ROL" nullable="0" physicalName="ID_ROL" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL ROL</remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="f6aab309-be02-4ceb-9296-611338745766" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ESTADO_seq" defaultValue="" name="ESTADO" nullable="0" physicalName="ESTADO" precision="0" referenceCount="1" scale="0" source-column-ref="COL18" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>ESTADO ACTIVO O INACTIVO</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB213" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB212" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB214" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX24" populated="true" UUID="992e4743-b9b8-42a8-b807-f22913a3782e" clustered="false" name="ROL_pk" physicalName="ROL_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC25" populated="true" UUID="bc47f2c7-737c-4106-9727-092dfa8d1156" ascendingOrDescending="UNSPECIFIED" column-ref="COL22" name="ID_ROL" physicalName="ID_ROL" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB26" populated="true" UUID="bb1171d6-fd0b-4d51-bc29-82f97d929c12" name="TAREA" objectType="TABLE" physicalName="TAREA" >
+   <remarks>TABLA DE LAS TAREAS RELACIONADAS A UN PROYECTO</remarks>
+   <folder id="FOLTAB261" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL27" populated="true" UUID="3653a71a-4717-404d-8629-a29b5c5ec931" autoIncrement="true" autoIncrementSequenceName="TAREA_ID_TAREA_seq" defaultValue="" name="ID_TAREA" nullable="0" physicalName="ID_TAREA" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DE LA TAREA</remarks>
+    </column>
+    <column id="COL28" populated="true" UUID="afe4c868-199d-4640-84f4-1715511dc95e" autoIncrement="false" autoIncrementSequenceName="ESTADO_TAREA_ID_ESTADO_seq" defaultValue="" name="ID_ESTADO" nullable="0" physicalName="ID_ESTADO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DE LA TAREA.</remarks>
+    </column>
+    <column id="COL29" populated="true" UUID="ce687708-434f-4242-a358-1c51d11a2875" autoIncrement="false" autoIncrementSequenceName="PROYECTO_ID_PROYECTO_seq" defaultValue="" name="ID_PROYECTO" nullable="0" physicalName="ID_PROYECTO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DEL PROYECTO</remarks>
+    </column>
+    <column id="COL30" populated="true" UUID="5e30998e-9a12-49b1-9ce8-91691ddbd781" autoIncrement="false" autoIncrementSequenceName="TAREA_USUARIO_ROL_seq" defaultValue="" name="USUARIO_ROL" nullable="1" physicalName="USUARIO_ROL" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>USUARIO ASIGNADO A LA TAREA</remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="2eb62872-a029-48af-8cef-d0a381e31950" autoIncrement="false" autoIncrementSequenceName="TAREA_TITULO_seq" defaultValue="" name="TITULO" nullable="0" physicalName="TITULO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>TITULO DE LA TAREA</remarks>
+    </column>
+    <column id="COL32" populated="true" UUID="7dfbaec6-d8b5-4b40-ab1a-c19f572cea61" autoIncrement="false" autoIncrementSequenceName="TAREA_DESCRIPCION_seq" defaultValue="" name="DESCRIPCION" nullable="0" physicalName="DESCRIPCION" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>DESCRIPCION DE LA TAREA</remarks>
+    </column>
+    <column id="COL33" populated="true" UUID="63319d1e-de1b-4498-a746-c58a67663fad" autoIncrement="false" autoIncrementSequenceName="TAREA_COMENTARIO_seq" defaultValue="" name="COMENTARIO" nullable="1" physicalName="COMENTARIO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>COMENTARIO DE LA TAREA</remarks>
+    </column>
+    <column id="COL34" populated="true" UUID="4657b12c-6581-4206-9a06-8a6147eb55cf" autoIncrement="false" autoIncrementSequenceName="TAREA_FECHA_INICIO_ESTIMADA_seq" defaultValue="" name="FECHA_INICIO_ESTIMADA" nullable="0" physicalName="FECHA_INICIO_ESTIMADA" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>FECHA ESTIMADA DE INICIO</remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="ca28a367-b906-4ba0-bdeb-ca417d87074a" autoIncrement="false" autoIncrementSequenceName="TAREA_FECHA_FIN_ESTIMADA_seq" defaultValue="" name="FECHA_FIN_ESTIMADA" nullable="0" physicalName="FECHA_FIN_ESTIMADA" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>FECHA ESTIMADA DE FIN</remarks>
+    </column>
+    <column id="COL36" populated="true" UUID="38690db6-8287-482d-83fd-f7bf811f30da" autoIncrement="false" autoIncrementSequenceName="TAREA_FECHA_INICIO_REAL_seq" defaultValue="" name="FECHA_INICIO_REAL" nullable="1" physicalName="FECHA_INICIO_REAL" precision="0" referenceCount="1" scale="0" source-column-ref="COL34" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>FECHA REAL DE INICIO</remarks>
+    </column>
+    <column id="COL37" populated="true" UUID="21de3866-6c53-4042-93f2-1537b8cbd625" autoIncrement="false" autoIncrementSequenceName="TAREA_FECHA_FIN_REAL_seq" defaultValue="" name="FECHA_FIN_REAL" nullable="1" physicalName="FECHA_FIN_REAL" precision="0" referenceCount="1" scale="0" source-column-ref="COL34" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>FECHA REAL DE FIN</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB264" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX38" populated="true" UUID="40572cb2-fa54-4982-9ac9-d8ba0c13eb9f" clustered="false" name="TAREA_pk" physicalName="TAREA_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC39" populated="true" UUID="6add9b1a-77a9-4b56-8da0-ac68351843ba" ascendingOrDescending="UNSPECIFIED" column-ref="COL27" name="ID_TAREA" physicalName="ID_TAREA" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB40" populated="true" UUID="bf9f70cb-a2da-45a0-b443-06df86442386" name="ESTADO_TAREA" objectType="TABLE" physicalName="ESTADO_TAREA" >
+   <remarks>ESTADO DE LA TAREA</remarks>
+   <folder id="FOLTAB401" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL41" populated="true" UUID="13ed9eae-0c78-45b6-bf0b-4af7cd0989ae" autoIncrement="true" autoIncrementSequenceName="ESTADO_TAREA_ID_ESTADO_seq" defaultValue="" name="ID_ESTADO" nullable="0" physicalName="ID_ESTADO" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>IDENTIFICADOR DE LA TAREA.</remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="287b6f2a-113a-4bdc-bf1f-db63d469238e" autoIncrement="false" autoIncrementSequenceName="ESTADO_TAREA_NOMBRE_ESTADO_seq" defaultValue="" name="NOMBRE_ESTADO" nullable="0" physicalName="NOMBRE_ESTADO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>NOMBRE DEL ESTADO</remarks>
+    </column>
+    <column id="COL43" populated="true" UUID="198950f7-5c68-4e51-8a5e-99b2d8bcd421" autoIncrement="false" autoIncrementSequenceName="ESTADO_TAREA_DESCRIPCION_ESTADO_seq" defaultValue="" name="DESCRIPCION_ESTADO" nullable="1" physicalName="DESCRIPCION_ESTADO" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>DESCRIPCION DEL ESTADO DE LA TAREA</remarks>
+    </column>
+    <column id="COL44" populated="true" UUID="80dd3c33-aa40-4f8c-84bd-d08d25e46e15" autoIncrement="false" autoIncrementSequenceName="PROYECTO_USUARIO_ROL_ESTADO_seq" defaultValue="" name="ESTADO" nullable="0" physicalName="ESTADO" precision="0" referenceCount="1" scale="0" source-column-ref="COL18" sourceDataTypeName="UserDefinedSQLType" type="16" userDefinedTypeUUID="a26374aa-3026-4bb8-b564-eb2e186dfa5d" >
+     <remarks>ESTADO ACTIVO O INACTIVO</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB403" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB402" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB404" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX45" populated="true" UUID="38b0449c-b85c-4312-b6d0-613c128c3431" clustered="false" name="ESTADO_TAREA_pk" physicalName="ESTADO_TAREA_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC46" populated="true" UUID="c5dc7a0d-b7b6-40c0-88fa-8d64ebf9175f" ascendingOrDescending="UNSPECIFIED" column-ref="COL41" name="ID_ESTADO" physicalName="ID_ESTADO" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL47" populated="true" UUID="0c8578b5-2dfe-4511-9015-166aef1754ec" deferrability="7" deleteRule="3" fk-table-ref="TAB13" fkCardinality="6" identifying="false" name="PROYECTO_PROYECTO_USUARIO_fk" physicalName="PROYECTO_PROYECTO_USUARIO_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP48" populated="true" UUID="a8995fcd-8d3b-41f8-94de-8bd6e3883081" fk-column-ref="COL15" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL49" populated="true" UUID="0e15a67d-6988-4382-b30f-49931599cfec" deferrability="7" deleteRule="3" fk-table-ref="TAB26" fkCardinality="7" identifying="false" name="PROYECTO_TAREA_fk" physicalName="PROYECTO_TAREA_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP50" populated="true" UUID="d0594e00-d6de-4fc2-b46e-4bdb8b874a28" fk-column-ref="COL29" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL51" populated="true" UUID="7ccbb470-f8cf-4ed2-80aa-8ceb3bee02b2" deferrability="7" deleteRule="3" fk-table-ref="TAB13" fkCardinality="6" identifying="false" name="USUARIO_PROYECTO_USUARIO_fk" physicalName="USUARIO_PROYECTO_USUARIO_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP52" populated="true" UUID="ae835508-e493-426e-b3aa-e2f86e463ef5" fk-column-ref="COL16" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   </relationship>
+   <relationship id="REL53" populated="true" UUID="25ff3a27-7dda-472f-81cc-e3c9a62006e8" deferrability="7" deleteRule="3" fk-table-ref="TAB13" fkCardinality="6" identifying="false" name="ROL_PROYECTO_USUARIO_fk" physicalName="ROL_PROYECTO_USUARIO_fk" pk-table-ref="TAB21" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP54" populated="true" UUID="a8c0e29f-c3f6-4e9b-a2c7-04bf0882200b" fk-column-ref="COL17" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL22" />
+   </relationship>
+   <relationship id="REL55" populated="true" UUID="d7f68acf-b231-4a6f-b2aa-901e90f07817" deferrability="7" deleteRule="3" fk-table-ref="TAB26" fkCardinality="7" identifying="false" name="ESTADO_TAREA_TAREA_fk" physicalName="ESTADO_TAREA_TAREA_fk" pk-table-ref="TAB40" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP56" populated="true" UUID="72f08d5a-0eae-4930-b39a-2c7f9957a899" fk-column-ref="COL28" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL41" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="468" y="265" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="879" y="219" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB13" x="704" y="382" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB21" x="758" y="566" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB26" x="601" y="21" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB40" x="963" y="45" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL47" pkConnection="0.7317073170731707" fkConnection="0.27014218009478674" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL51" pkConnection="0.36548223350253806" fkConnection="0.6635071090047393" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL53" pkConnection="0.8596491228070176" fkConnection="0.1166077738515901" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL49" pkConnection="0.4975609756097561" fkConnection="0.5023696682464455" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL55" pkConnection="0.6338028169014085" fkConnection="0.4371584699453552" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
