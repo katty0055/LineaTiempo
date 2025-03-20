@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-gantt">
+    <h2>Diagrama de Gantt del Proyecto: {{ proyecto.titulo }}</h2>
+
+    <div class="gantt-chart">
+        <!-- Encabezado de los días -->
+        <div class="gantt-header">
+            <div class="gantt-header-days">
+                {% for day in days_in_year %}
+                    <div class="gantt-day">{{ day }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Cuerpo del diagrama -->
+        <div class="gantt-body">
+            {% for tarea in tareas %}
+                <div class="gantt-row">
+                    <div class="gantt-task">{{ tarea.titulo }}</div>
+                    <div class="gantt-bars">
+                        <div class="gantt-bar" style="left: {{ tarea.start_position }}%; width: {{ tarea.duration }}%;"></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

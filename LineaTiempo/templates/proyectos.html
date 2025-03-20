@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Proyectos</h2>
+    <ul>
+        {% for proyecto in proyectos %}
+            <a href="{% url 'detalle_proyecto' proyecto.id_proyecto %}">
+                {{ proyecto.titulo }}
+            </a>
+        {% empty %}
+            <li>No hay proyectos disponibles para este usuario.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
